@@ -1,14 +1,15 @@
 const express = require('express')
 var cors = require('cors')
-require('dotenv').config()
+const dotenv = require('dotenv').config();
 const app =express()
 
-const port =process.env.port ||4000
+const port =process.env.PORT ||4000
 
 app.use(cors())
 
 app.get('/' ,(req, res)=>{
   res.send('hello rohit how are you')
+  console.log(process.env.PACK)
 })
 
 
